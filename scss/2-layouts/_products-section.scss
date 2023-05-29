@@ -1,0 +1,19 @@
+@use "layout-mixins";
+@use "../1-base/base-mixins";
+
+.products-grid {
+  @include layout-mixins.center-content;
+  flex-direction: column;
+  padding: 2rem 0;
+
+  h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+}

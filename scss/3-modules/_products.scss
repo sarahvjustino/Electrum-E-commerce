@@ -1,0 +1,61 @@
+@use "../1-base/base-mixins";
+@use "../1-base/variables";
+
+.products-grid-card {
+  border: 2px solid variables.$gray-text-color;
+  position: relative;
+  width: 20%;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+
+  &:hover {
+    border-color: variables.$primary-color;
+  }
+
+  .label {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    padding: 2px 6px;
+    border: 1px solid variables.$primary-color;
+    color: variables.$primary-color;
+  }
+
+  .new {
+    background-color: variables.$primary-color;
+    color: variables.$light-color;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .category,
+  .product-name,
+  .product-price,
+  .rating-box,
+  .btn {
+    margin-bottom: 1.4rem;
+  }
+
+  .category {
+    margin-top: 1.4rem;
+    text-transform: uppercase;
+    color: variables.$gray-text-color;
+  }
+
+  .product-name {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  .product-price {
+    color: variables.$primary-color;
+    font-size: 1.9rem;
+    font-weight: bold;
+  }
+}
