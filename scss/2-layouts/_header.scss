@@ -76,3 +76,29 @@
     }
   }
 }
+
+.header-bottom {
+  background-color: variables.$light-color;
+  border-bottom: 2px solid variables.$section-bg-color;
+  border-top: 3px solid variables.$primary-color;
+
+  ul {
+    @include layout-mixins.center-content;
+    justify-content: left;
+    padding: 1.4rem 0;
+
+    li {
+      margin-right: 1.8rem;
+
+      a {
+        color: variables.$link-color;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+          color: variables.$primary-color;
+          border-color: variables.$primary-color;
+        }
+      }
+    }
+  }
+}
