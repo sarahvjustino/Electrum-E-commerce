@@ -1,0 +1,37 @@
+@use "variables";
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+i {
+  color: variables.$primary-color;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+
+  &:hover {
+    color: variables.$primary-color;
+  }
+}
+
+input {
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
