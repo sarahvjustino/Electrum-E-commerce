@@ -1,0 +1,71 @@
+@use "../1-base/base-mixins";
+@use "../1-base/variables";
+@use "layout-mixins";
+
+.footer {
+  padding: 3rem 0;
+  background-color: variables.$bg-color;
+
+  a,
+  p {
+    color: variables.$gray-text-color;
+  }
+
+  li,
+  p {
+    margin-bottom: 1.4rem;
+
+    a {
+      font-weight: 400;
+      &:hover {
+        color: variables.$primary-color;
+      }
+    }
+  }
+
+  i {
+    margin-right: 0.8rem;
+  }
+
+  h3 {
+    color: variables.$light-color;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  &-top {
+    @include layout-mixins.center-content;
+    padding-bottom: 4rem;
+
+    &-about,
+    &-category,
+    &-information,
+    &-menu {
+      max-width: 25%;
+    }
+  }
+
+  &-bottom {
+    @include layout-mixins.center-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-payment {
+      margin-bottom: 3rem;
+
+      i {
+        color: variables.$dark-color;
+        cursor: pointer;
+        font-size: 4rem;
+        margin: 0.5rem;
+        transition: 0.4s;
+
+        &:hover {
+          color: variables.$primary-color;
+        }
+      }
+    }
+  }
+}
