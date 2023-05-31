@@ -12,6 +12,11 @@
   align-items: center;
   transition: 0.4s;
 
+  @include base-mixins.mobile {
+    width: 90%;
+    margin: 1.4rem;
+  }
+
   &:hover {
     border-color: variables.$primary-color;
   }

@@ -12,6 +12,13 @@
   height: 40rem;
   padding: 3rem;
 
+  @include base-mixins.mobile {
+    background-position-x: 120%;
+    background-position-y: 130%;
+    background-size: 70%;
+    height: 70rem;
+  }
+
   &-content {
     height: 100%;
     flex-direction: column;
@@ -19,9 +26,19 @@
     @include layout-mixins.center-content;
     align-items: center;
 
+    @include base-mixins.mobile {
+      align-items: center;
+    }
+
     &-timer {
       display: flex;
       margin-bottom: 3rem;
+
+      @include base-mixins.mobile {
+        flex-wrap: wrap;
+        align-self: center;
+        justify-content: center;
+      }
     }
 
     .deal-container-timer {
@@ -35,6 +52,10 @@
       background-color: variables.$primary-color;
       color: variables.$light-color;
       margin: 0 1.4rem;
+
+      @include base-mixins.mobile {
+        margin-bottom: 2rem;
+      }
 
       &-time {
         font-weight: bold;

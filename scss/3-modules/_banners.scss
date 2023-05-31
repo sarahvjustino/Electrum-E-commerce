@@ -11,6 +11,11 @@
   @include modules-mixins.center-bg;
   background-size: 100%;
 
+  @include base-mixins.mobile {
+    width: 100%;
+    margin: 1.4rem;
+  }
+
   &:hover {
     background-size: 120%;
   }
